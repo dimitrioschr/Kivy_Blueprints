@@ -1,3 +1,17 @@
+<RobotoLabel@Label>:
+    font_name: 'Roboto'
+    font_size: 60
+    markup: True
+
+<RobotoButton@Button>:
+    font_name: 'Roboto'
+    font_size: 25
+    bold: True
+    background_normal: 'button_normal.png'
+    background_down: 'button_down.png'
+    border: (2, 2, 2, 2)
+
+
 BoxLayout:
     orientation: 'vertical'
 
@@ -28,17 +42,3 @@ BoxLayout:
     RobotoLabel:
         id: stopwatch_label
         text: '00:00.[size=40]00[/size]'
-
-
-<RobotoLabel@Label>:
-    font_name: 'Roboto'
-    font_size: 60
-    markup: True
-
-<RobotoButton@Button>:
-    font_name: 'Roboto'
-    font_size: 25
-    bold: True
-    background_normal: 'button_normal.png'
-    background_down: 'button_down.png'
-    border: (2, 2, 2, 2)

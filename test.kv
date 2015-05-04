@@ -1,0 +1,65 @@
+<MyButton@Button>
+    font_name: 'Roboto'
+    font_size: 100
+    bold: True
+    markup: True
+
+
+BoxLayout:
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+
+        MyButton:
+            id: '11'
+            text: '11'
+            background_color: [0, 0.75, 0, 1]
+            on_press: app.presser()
+            size_hint: (3, 1)
+
+        MyButton:
+            id: '12'
+            text: '12'
+            size_hint: (5, 1)
+
+        MyButton:
+            id: '13'
+            text: '13'
+            size_hint: (3, 1)
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+        MyButton:
+            id: '21'
+            text: '21'
+
+        MyButton:
+            id: '22'
+            text: '22'
+
+        MyButton:
+            id: '23'
+            text: '23'
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+        MyButton:
+            id: '31'
+            text: '31'
+            size_hint: (5, 1)
+
+
+        MyButton:
+            id: '32'
+            text: '32'
+            size_hint: (3, 1)
+
+
+        MyButton:
+            id: '33'
+            text: '33'
+            size_hint: (5, 1)
