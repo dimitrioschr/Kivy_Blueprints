@@ -9,15 +9,17 @@ BoxLayout:
         Button:
             id: cp
             text: 'CP details'
+            on_press: app.input_cp()
 
         Button:
             id: vsl
             text: 'Vessel details'
+            on_press: app.input_vsl()
 
         Button:
             id: add
             text: 'Add element'
-            on_press: app.tester()
+            on_press: app.add_element()
 
     BoxLayout:
         orientation: 'vertical'
@@ -31,11 +33,13 @@ BoxLayout:
 
         Button:
             id: reset
-            text: 'Reset'
+            text: 'Reset elements'
+            on_press: app.reset()
 
         Button:
             id: calc
             text: 'Calculate'
+            on_press: app.calculate()
 
         Button:
             id: dop
