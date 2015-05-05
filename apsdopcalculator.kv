@@ -1,0 +1,42 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        id: top
+        size_hint: (1, 1)
+
+        Button:
+            id: cp
+            text: 'CP details'
+
+        Button:
+            id: vsl
+            text: 'Vessel details'
+
+        Button:
+            id: add
+            text: 'Add element'
+            on_press: app.tester()
+
+    BoxLayout:
+        orientation: 'vertical'
+        id: list
+        size_hint: (1, 8)
+
+    BoxLayout:
+        orientation: 'horizontal'
+        id: bottom
+        size_hint: (1, 1)
+
+        Button:
+            id: reset
+            text: 'Reset'
+
+        Button:
+            id: calc
+            text: 'Calculate'
+
+        Button:
+            id: dop
+            text: 'DOP rate'
