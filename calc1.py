@@ -32,14 +32,25 @@ class APSDOPCalculatorApp(App):
         popup.open()
 
     def input_vsl(self):
-        pass
+        label = Label(text = 'replace with\ncustom widget\nhere',
+                      size_hint = (1, 5))
+        button = Button(text = 'Close',
+                        size_hint = (1, 1))
+        box = BoxLayout(orientation = 'vertical')
+        box.add_widget(label)
+        box.add_widget(button)
+        popup = Popup(title = 'Input vessel particulars and ROB',
+                      content = box)
+        button.bind(on_press = popup.dismiss)
+        popup.open()
 
     def reset(self):
         self.root.ids.list.clear_widgets()
         self.line_number = 1
+        self.root.ids.dop.text = 'DOP rate'
 
     def calculate(self):
-        pass
+        self.root.ids.dop.text = '10000'
 
 
 
