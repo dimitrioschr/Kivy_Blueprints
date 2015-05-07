@@ -27,7 +27,8 @@ class APSDOPCalculatorApp(App):
         box.add_widget(label)
         box.add_widget(button)
         popup = Popup(title = 'Input agreed APS and hire rates',
-                      content = box)
+                      content = box,
+                      size_hint = (0.5, 0.5))
         button.bind(on_press = popup.dismiss)
         popup.open()
 
@@ -40,7 +41,8 @@ class APSDOPCalculatorApp(App):
         box.add_widget(label)
         box.add_widget(button)
         popup = Popup(title = 'Input vessel particulars and ROB',
-                      content = box)
+                      content = box,
+                      size_hint = (0.5, 0.5))
         button.bind(on_press = popup.dismiss)
         popup.open()
 
