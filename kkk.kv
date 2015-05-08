@@ -1,7 +1,40 @@
+<MaPopup@Popup>:
+    title: 'title_text'
+    size_hint: (0.5, 0.5)
+    auto_dismiss: False
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'label_text'
+            size_hint: (1, 5)
+
+        Button:
+            text: 'Close'
+            size_hint: (1, 1)
+            on_release: root.dismiss()
+
+<ListElement@BoxLayout>:
+    size_hint: (1, None)
+    height: 50
+
+    Button:
+        text: 'img'
+        size_hint: [0.15, 1]
+
+    Button:
+        text: app.random_label()
+        size_hint: [0.7, 1]
+
+    Button:
+        text: 'X'
+        size_hint: [0.15, 1]
+        on_release: root.parent.remove_widget(root)
+
+
 BoxLayout:
-    id: main_box
     orientation: 'vertical'
 
     Button:
-        id: main_button
-        on_release: app.do()
+        on_release: app.root.add_widget(app.ListElement())

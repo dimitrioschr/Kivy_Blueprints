@@ -1,15 +1,22 @@
+import random
+
 from kivy.app import App
+
 from kivy.uix.popup import Popup
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 
-import random
-
-
 class kkkApp(App):
 
+    class MaPopup(Popup):
+        pass
+
+    class ListElement(BoxLayout):
+        pass
+
+    def random_label(self):
+        return str(int(100000 * random.random()))
 
     def ButtonLeftImage(self):
         box = BoxLayout(size_hint = (1, None), height = 50)
@@ -25,17 +32,6 @@ class kkkApp(App):
         box.add_widget(but2)
         return box, but2
 
-    def do_popup(self):
-        pu = Popup(title = 'title', size_hint = (0.5, 0.5))
-        box = BoxLayout(orientation = 'vertical')
-        lab = Label(text = 'text', size_hint = (1, 5))
-        but = Button(text = 'Close', size_hint = (1, 1))
-        box.add_widget(lab)
-        box.add_widget(but)
-        pu.add_widget(box)
-        pu.open()
-        but.bind(on_release = pu.dismiss)
-
     def do(self):
         element, clear = self.ButtonLeftImage()
         self.root.add_widget(element)
@@ -47,6 +43,12 @@ class kkkApp(App):
         # lambda used to create callback function,
         # x is the clear Button (auto-returned from on_release)
         # element is to be removed (what we want to remove)
+
+    def do2(self):
+        element = self.ListElement()
+        clear = element.children[0]
+        self.root.add_widget(element)
+        # clear.bind(on_release = lambda x: element.parent.remove_widget(element))
 
 
 kkkApp().run()
